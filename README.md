@@ -1,16 +1,41 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
-Include the date you created this project and README file.
+September 15th, 2022
 
 ### Project Title
-Replace the Project Title
+Explore Bikeshares Data using python
 
 ### Description
-Describe what your project is about and what it does
+Using this code we can see the following:
+1.Popular times of travel 
+
+-most common month 
+-most common day of week
+-most common hour of day
+
+2.Popular stations and trip 
+
+-most common start station 
+-most common end station 
+-most common trip from start to end
+
+3.Trip duration 
+
+-total travel time 
+-average travel time
+
+4.User info
+ 
+-counts of each user type 
+-counts of each gender (only available for NYC and Chicago) 
+-earliest, most recent, most common year of birth (only available for NYC and Chicago)
+
+5.Raw Data
 
 ### Files used
-Include the files used
+chicago.cvs
+new_york_city.cvs
+washington.cvs
 
 
 ### Built With

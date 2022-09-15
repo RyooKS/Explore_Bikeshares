@@ -17,17 +17,17 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = str(input("Would you like to see data from Chicago, New York city, or Washington? ")).lower()
     while city not in ['chicago', 'new york city', 'washington']:
         city = str(input("Please Choose Chicago, New York City, or Washington. ")).lower()
 
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # Get user input for month (all, january, february, ... , june)
     month = str(input("Which month would you like to see? ")).lower()
     while month not in ['january', 'february', 'march', 'april', 'may', 'june', 'all']:
         month = str(input("Please January, February, March, April, May, June ,or All ")).lower()
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # Get user input for day of week (all, monday, tuesday, ... sunday)
     day = str(input("Which day? ")).lower()
     while day not in ['monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'sunday', 'all']:
         day = str(
@@ -73,13 +73,13 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+    # Display the most common month
     print('Most Common Month: ', df['month'].mode()[0])
 
-    # TO DO: display the most common day of week
+    # Display the most common day of week
     print('Most Common Day Of Week: ', df['day_of_week'].mode()[0])
 
-    # TO DO: display the most common start hour
+    # Display the most common start hour
     print('Most Common Start Hour Of Day: ', df['hour'].mode()[0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -92,13 +92,13 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
+    # Display most commonly used start station
     print('Most Common Start Station: ', df['Start Station'].mode()[0])
 
-    # TO DO: display most commonly used end station
+    # Display most commonly used end station
     print('Most Common End Station: ', df['End Station'].mode()[0])
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # Display most frequent combination of start station and end station trip
     print("Most frequent combination of start station and end station: " +
           (df['Start Station'] + "||" + df['End Station']).mode()[0])
 
@@ -112,10 +112,10 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # Display total travel time
     print('Total Travel Time(Seconds): ', int(df['Trip Duration'].sum()))
 
-    # TO DO: display mean travel time
+    # Display mean travel time
     print('Mean Travel Time(Seconds): ', int(df['Trip Duration'].mean()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -128,14 +128,14 @@ def user_stats(df, city):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     print('User Types in Data: ', df['User Type'].value_counts())
 
     if city == 'chicago' or city == 'new_york_city':
-        # TO DO: Display counts of gender
+        # Display counts of gender
         print("The count of user gender: ", df['Gender'].value_counts())
 
-        # TO DO: Display earliest, most recent, and most common year of birth
+        # Display earliest, most recent, and most common year of birth
         print("The earliest year is: ", int(df['Birth Year'].min()))
         print("The most recent year is: ", int(df['Birth Year'].max()))
         print("The most common year is: ", int(df['Birth Year'].value_counts().idxmax()))
